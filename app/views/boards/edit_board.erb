@@ -1,6 +1,5 @@
 <h1>Edit your board</h1>
 <br>
-
 <form action="/boards" method="POST">
   <div class="form-group row">
     <label class="col-sm-2 col-form-label col-form-label-lg">Name</label>
@@ -11,7 +10,6 @@
   <input type="submit" class="btn btn-info" value="submit">
 </form>
 <br><br>
-
 <form action="/boards/<%= @board.slug %>/delete" method="POST">
   <input id="hidden" type="hidden" name="_method" value="delete">
   <input type="submit" class="btn btn-danger" value="Delete board">

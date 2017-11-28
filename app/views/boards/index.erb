@@ -1,13 +1,11 @@
 <h1 class="display-4">Welcome, <%= current_user.username %></h1>
 <a href="/users/<%= current_user.slug %>" class="btn btn-outline-info btn-sm">Your boards</a>
 <br><br>
-
 <h3>Explore list of boards</h3>
-
-<div class="container text-info"
-<% @boards.each do |board| %>
-  <ul>
-    <li><a class="text-info" href="/boards/<%= board.slug %>"><%= board.name %></a></li>
-  </ul>
-<% end %>
-</div>
+  <div class="container text-info"
+  <% @boards.each do |board| %>
+    <ul>
+      <li><a class="text-info" href="/boards/<%= board.slug %>"><%= board.name %></a></li>
+    </ul>
+    <% end %>
+  </div>

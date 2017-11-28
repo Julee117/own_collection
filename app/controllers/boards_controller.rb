@@ -20,7 +20,7 @@ class BoardsController < ApplicationController
     if params[:name].empty?
       redirect to '/boards/new'
     else
-      @review = current_user.boards.create(name: params[:name])
+      @board = current_user.boards.create(name: params[:name])
       redirect to "/boards/#{@board.slug}"
     end
   end
