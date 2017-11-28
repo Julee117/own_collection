@@ -16,4 +16,22 @@ class UsersController < ApplicationController
       redirect to '/boards'
     end
   end
+
+  get '/login' do
+    if !logged_in?
+      erb :'/users/login'
+    else
+      redirect to '/boards'
+    end
+  end
+
+  post '/login' do
+    user = User.find_by(:username => params[:username])
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect to '/boards'
+    else
+      redirect to 'signup'
+    end
+  end
 end
