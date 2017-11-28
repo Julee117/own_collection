@@ -1,0 +1,14 @@
+<h1>Edit <%= @board.name %> board</h1>
+
+<form action="/boards/<%= @board.slug %>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  Name <input type="text" name="name" value="<%= @board.name %>">
+  <br><br>
+  <input type="submit" value="submit">
+</form>
+<br>
+
+<form action="/boards/<%= @board.slug %>/delete" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete board">
+</form>
