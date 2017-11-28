@@ -1,0 +1,6 @@
+<h2><%= @user.username %> Boards </h2>
+<% @user.boards.each do |board| %>
+  <ul>
+    <li><a href="/boards/<%= board.slug %>"><%= board.name %></a></li>
+  </ul>
+<% end %>
