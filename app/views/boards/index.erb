@@ -1,0 +1,10 @@
+<h2>Welcome, <%= current_user.username %></h2>
+<a href="/users/<%= current_user.slug %>">Your boards</a>
+
+<h3>Explore list of boards</h2>
+
+<% @boards.each do |board| %>
+  <ul>
+    <li><a href="/boards/<%= board.slug %>"><%= board.name %></a></li>
+  </ul>
+<% end %>
