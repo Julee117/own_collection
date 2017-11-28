@@ -1,0 +1,25 @@
+<h1>Edit this item</h1>
+
+<form action="/items/<%= @item.id %>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  Description <input type="text" name="item[description]" value="<%= @item.description %>">
+  <br>
+  Link to website <input type="text" name="item[url]" value="<%= @item.url %>">
+  <br>
+  Source of website <input type="text" name="item[site_source]" value="<%= @item.site_source %>">
+  <br>
+  Board
+  <select name="item[board_id]">
+    <% current_user.boards.each do |board| %>
+      <option value="<%= board.id %>"><%= board.name %></option>
+    <% end %>
+  </select>
+  <br><br>
+  <input type="submit" value="submit">
+</form>
+<br>
+
+<form action="/items/<%= @item.id %>/delete" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete item">
+</form>
