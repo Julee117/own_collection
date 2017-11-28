@@ -1,7 +1,7 @@
 <h1 class="display-4">Items</h1>
   <div class="container text-info">
   <% @items.each do |item| %>
-    <ul>
+    <ul class="list-unstyled">
       <li><a class="text-info" href="/items/<%= item.id %>"><%= item.description %></li>
     </ul>
   <% end %>

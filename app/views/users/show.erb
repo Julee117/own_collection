@@ -1,8 +1,7 @@
-<h1 class="display-4"><%= @user.username %>'s Boards </h1>
-
+<h1 class="display-4"><%= @user.username %>'s Boards</h1>
   <div class="container text-info">
   <% @user.boards.each do |board| %>
-    <ul>
+    <ul class="list-unstyled">
       <li><a class="text-info" href="/boards/<%= board.slug %>"><%= board.name %></a></li>
     </ul>
     <% end %>
