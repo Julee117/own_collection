@@ -31,7 +31,16 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect to '/boards'
     else
-      redirect to 'signup'
+      redirect to '/signup'
     end
+  end
+
+  get '/logout' do
+    if logged_in?
+      session.destroy
+      redirect to '/login'
+    else
+      redirect to '/'
+    end 
   end
 end
