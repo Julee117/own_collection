@@ -1,0 +1,18 @@
+<h1>Create an item</h1>
+
+<form action="/items" method="POST">
+  Add a description <input type="text" name="item[description]" placeholder="Description..">
+  <br>
+  Link to website <input type="text" name="item[url]" placeholder="http://">
+  <br>
+  Source of website <input type="text" name="item[site_source]" placeholder="Like 'Crate and Barrel' or 'Buzzfeed'">
+  <br>
+  Add to your board
+  <select name="item[board_id]">
+    <% current_user.boards.each do |board| %>
+      <option value="<%= board.id %>"><%= board.name %></option>
+    <% end %>
+  </select>
+  <br><br>
+  <input type="submit" value="submit">
+</form>
