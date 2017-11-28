@@ -1,6 +1,5 @@
-<h2><%= @item.description %></h2>
-<h4>From <a href="<%= @item.url %>" target="_blank"><%= @item.site_source %></a></h4>
+<h1><%= @item.description %></h1>
+<p class="lead">From <a href="<%= @item.url %>" target="_blank"><%= @item.site_source %></a></p>
 
-<a href="/items/<%= @item.id %>/edit">Edit item</a>
-<a href="/items">Back to items</a>
-<a href="/boards">Back to boards</a>
+<a class="btn btn-outline-info btn-sm" href="/items/<%= @item.id %>/edit">Edit item</a>
+<a class="btn btn-outline-info btn-sm" href="/items">Back to items</a>
