@@ -7,20 +7,21 @@
   </head>
   <body>
     <div class="jumbotron jumbotron-fluid bg-info">
-
       <% if logged_in? %>
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link text-white" href="/boards/new"> Create a board </a>
+          <a class="nav-link text-white" href="/boards">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/items/new">Create an item</a>
+          <a class="nav-link text-white" href="/boards/new">Create board</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link text-white" href="/logout">Log Out</a>
+          <a class="nav-link text-white" href="/items/new">Create item</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/logout">Log Out</a>
         </li>
       </ul>
-        <h4>OwnCollection</h4>
       <% else %>
       <ul class="nav justify-content-end">
         <li class="nav-item">
