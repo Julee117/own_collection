@@ -1,0 +1,9 @@
+<h2><%= @board.name %></h2>
+<% @board.items.each do |item| %>
+  <ul>
+    <li><a href="/items/<%= item.id %>"><%= item.description %></a></li>
+  </ul>
+<% end %>
+
+<a href="/boards/<%= @board.slug %>/edit">Edit board</a>
+<a href="/items/new">Create an item</a>
