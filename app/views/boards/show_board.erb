@@ -1,9 +1,11 @@
-<h2><%= @board.name %></h2>
+<h1 class="display-4"><%= @board.name %></h1>
+<a href="/boards/<%= @board.slug %>/edit" class="btn btn-outline-info btn-sm" >Edit board</a>
+<br><br>
+
+<div class="container text-info">
 <% @board.items.each do |item| %>
   <ul>
-    <li><a href="/items/<%= item.id %>"><%= item.description %></a></li>
+    <li><a class="text-info" href="/items/<%= item.id %>"><%= item.description %></a></li>
   </ul>
 <% end %>
-
-<a href="/boards/<%= @board.slug %>/edit">Edit board</a>
-<a href="/items/new">Create an item</a>
+</div>
