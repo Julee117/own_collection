@@ -56,4 +56,14 @@ class BoardsController < ApplicationController
       redirect to "/boards/#{@board.slug}"
     end
   end
+
+  delete '/boards/:slug/delete' do
+    @board = current_user.boards.find_by_slug(params[:slug])
+    if @board
+      @board.destroy
+      redirect to "/boards"
+    else
+      redirect to '/login'
+    end
+  end
 end
