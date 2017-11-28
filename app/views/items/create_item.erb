@@ -1,21 +1,28 @@
 <h1>Create item</h1>
 <br>
 
-<div class="row justify-content-md-center">
 <form action="/items" method="POST">
-  Add a description <input type="text" class="form-control" name="item[description]" placeholder="Description..">
-  <br>
-  Link to website <input type="text" class="form-control" name="item[url]" placeholder="http://">
-  <br>
-  Source of website <input type="text" class="form-control" name="item[site_source]" placeholder="Like 'Crate and Barrel'">
-  <br>
-  Add to your board
-  <select name="item[board_id]">
-    <% current_user.boards.each do |board| %>
-      <option value="<%= board.id %>"><%= board.name %></option>
-    <% end %>
-  </select>
-  <br><br>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label col-form-label-lg">Add a description</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="item[description]" placeholder="Description..">
+    </div>
+  <label class="col-sm-2 col-form-label col-form-label-lg">Link to website</label>
+    <div class="col-sm-10">
+       <input type="text" class="form-control" name="item[url]" placeholder="http://">
+    </div>
+  <label class="col-sm-2 col-form-label col-form-label-lg">Source of website</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="item[site_source]" placeholder="Like 'Crate and Barrel'">
+    </div>
+  <label class="col-sm-2 col-form-label col-form-label-lg">Add to your board</label>
+    <div class="col-sm-10">
+      <select name="item[board_id]" class="form-control">
+        <% current_user.boards.each do |board| %>
+        <option value="<%= board.id %>"><%= board.name %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
   <input type="submit" class="btn btn-info" value="submit">
 </form>
-</div>
