@@ -3,19 +3,19 @@
 
 <form action="/items" method="POST">
   <div class="form-group row">
-  <label class="col-sm-2 col-form-label">Add a description</label>
+  <label id="label-name" class="col-sm-2 col-form-label">Add a description</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" name="item[description]" placeholder="Description..">
     </div>
-  <label class="col-sm-2 col-form-label">Link to website</label>
+  <label id="label-name" class="col-sm-2 col-form-label">Link to website</label>
     <div class="col-sm-10">
        <input type="text" class="form-control" name="item[url]" placeholder="http://">
     </div>
-  <label class="col-sm-2 col-form-label">Source of website</label>
+  <label id="label-name" class="col-sm-2 col-form-label">Source of website</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" name="item[site_source]" placeholder="Like 'Crate and Barrel'">
     </div>
-  <label class="col-sm-2 col-form-label">Add to your board</label>
+  <label id="label-name" class="col-sm-2 col-form-label">Add to your board</label>
     <div class="col-sm-10">
       <select name="item[board_id]" class="form-control">
         <% current_user.boards.each do |board| %>
