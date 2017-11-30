@@ -1,4 +1,4 @@
 <h1><%= @item.description %></h1>
-<p class="lead">From <a href="<%= @item.url %>" target="_blank"><%= @item.site_source %></a></p>
+<p class="lead">From <a id="site" href="<%= @item.url %>" target="_blank"><%= @item.site_source %></a></p>
 <a class="btn btn-outline-info btn-sm" href="/items/<%= @item.id %>/edit">Edit item</a>
 <a class="btn btn-outline-info btn-sm" href="/items">Back to items</a>
