@@ -18,9 +18,11 @@ class ItemsController < ApplicationController
 
   post '/items' do
     if params[:item][:description].empty? || params[:item][:url].empty? || params[:item][:site_source].empty?
+      flash[:message] = "Please fill in all the fields"
       redirect to '/items/new'
     else
-      @item = Item.create(description: params[:item][:description], url: params[:item][:url], site_source: params[:item][:site_source], board_id: params[:item][:board_id])
+      @item = Item.create(params[:item])
+      # @item = Item.create(description: params[:item][:description], url: params[:item][:url], site_source: params[:item][:site_source], board_id: params[:item][:board_id])
       redirect to "/items/#{@item.id}"
     end
   end
@@ -50,9 +52,11 @@ class ItemsController < ApplicationController
   patch '/items/:id' do
     @item = current_user.items.find_by_id(params[:id])
     if params[:item][:description].empty? || params[:item][:url].empty? || params[:item][:site_source].empty?
+      flash[:message] = "Please fill in all the fields"
       redirect to "/items/#{@item.id}/edit"
     else
-      @item.update(description: params[:item][:description], url: params[:item][:url], site_source: params[:item][:site_source], board_id: params[:item][:board_id])
+      @item.update(params[:item])
+      # @item.update(description: params[:item][:description], url: params[:item][:url], site_source: params[:item][:site_source], board_id: params[:item][:board_id])
       redirect to "/items/#{@item.id}"
     end
   end

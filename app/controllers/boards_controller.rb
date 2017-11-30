@@ -18,6 +18,7 @@ class BoardsController < ApplicationController
 
   post '/boards' do
     if params[:name].empty?
+      flash[:message] = "Please fill in the field"
       redirect to '/boards/new'
     else
       @board = current_user.boards.create(name: params[:name])
@@ -50,6 +51,7 @@ class BoardsController < ApplicationController
   patch '/boards/:slug' do
     @board = current_user.boards.find_by_slug(params[:slug])
     if params[:name].empty?
+      flash[:message] = "Please fill in the field"
       redirect to "/boards/#{@board.slug}/edit"
     else
       @board.update(name: params[:name])
