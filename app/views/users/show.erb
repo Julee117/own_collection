@@ -2,7 +2,7 @@
   <div class="container text-info">
   <% @user.boards.each do |board| %>
     <ul class="list-unstyled">
-      <li><a class="text-info" href="/boards/<%= board.slug %>"><%= board.name %></a></li>
+      <li><a class="text-info board-info" href="/boards/<%= board.slug %>"><%= board.name %></a></li>
     </ul>
     <% end %>
   </div>

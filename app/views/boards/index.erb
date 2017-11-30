@@ -1,9 +1,9 @@
 <h1 class="display-4">Welcome, <%= current_user.username %></h1>
-<h1>Explore</h1>
+<h1 id=>Explore</h1>
 <div class="container text-info">
   <% @boards.each do |board| %>
     <ul class="list-unstyled">
-      <li><a class="text-info" href="/boards/<%= board.slug %>"><%= board.name %></a></li>
+      <li><a class="text-info board-info" href="/boards/<%= board.slug %>"><%= board.name %></a></li>
     </ul>
     <% end %>
   </div>
