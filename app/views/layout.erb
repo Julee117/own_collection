@@ -4,6 +4,8 @@
     <title>OwnCollection</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
     <div class="jumbotron jumbotron-fluid bg-info">
@@ -11,6 +13,9 @@
       <ul class="nav justify-content-end">
         <li class="nav-item">
           <a class="nav-link text-white" href="/boards">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/users/<%= current_user.slug %>"><%= current_user.username %></a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="/boards/new">Create board</a>
@@ -34,7 +39,16 @@
       <%end %>
     </div>
 
-    <div class="container text-center text-info">
+    <% if flash.has?(:message) %>
+    <div class="alert alert-danger alert-dismissible fade show container text-center col-sm-6 justify-content-center" role="alert">
+      <strong><%= flash[:message] %><strong>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <% end %>
+
+    <div id="main" class="container text-center">
       <%= yield %>
     </div>
 
