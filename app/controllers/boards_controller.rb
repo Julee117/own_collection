@@ -61,8 +61,10 @@ class BoardsController < ApplicationController
 
   delete '/boards/:slug/delete' do
     @board = current_user.boards.find_by_slug(params[:slug])
+    @items = current_user.items.select { |item| item.board_id == @board.id }
     if @board
       @board.destroy
+      @items.each { |item| item.destroy }
       redirect to "/boards"
     else
       redirect to '/login'
