@@ -40,7 +40,7 @@ class ItemsController < ApplicationController
     if !logged_in?
       redirect to '/login'
     else
-      @item = Item.find_by_id(params[:id])
+      @item = current_user.items.find_by_id(params[:id])
       if @item.board.user_id == current_user.id
         erb :'items/edit_item'
       else
