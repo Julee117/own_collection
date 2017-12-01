@@ -22,7 +22,6 @@ class ItemsController < ApplicationController
       redirect to '/items/new'
     else
       @item = Item.create(params[:item])
-      # @item = Item.create(description: params[:item][:description], url: params[:item][:url], site_source: params[:item][:site_source], board_id: params[:item][:board_id])
       redirect to "/items/#{@item.id}"
     end
   end
@@ -56,7 +55,6 @@ class ItemsController < ApplicationController
       redirect to "/items/#{@item.id}/edit"
     else
       @item.update(params[:item])
-      # @item.update(description: params[:item][:description], url: params[:item][:url], site_source: params[:item][:site_source], board_id: params[:item][:board_id])
       redirect to "/items/#{@item.id}"
     end
   end
