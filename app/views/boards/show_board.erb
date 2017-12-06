@@ -7,4 +7,9 @@
   <% end %>
   </div>
 <br>
-<a href="/boards/<%= @board.slug %>/edit" class="btn btn-outline-info btn-sm" >Edit board</a>
+
+<% if @board.user == current_user %>
+<!-- OR -->
+ <!-- if @board.user_id == current_user.id  -->
+  <a href="/boards/<%= @board.slug %>/edit" class="btn btn-outline-info btn-sm" >Edit board</a>
+<% end %>
