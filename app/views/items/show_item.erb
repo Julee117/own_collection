@@ -1,4 +1,23 @@
 <h1><%= @item.description %></h1>
 <p class="lead">From <a id="site" href="<%= @item.url %>" target="_blank"><%= @item.site_source %></a></p>
-<a class="btn btn-outline-info btn-sm" href="/items/<%= @item.id %>/edit">Edit item</a>
+
+<% if @item.board.user_id == current_user.id %>
+  <a class="btn btn-outline-info btn-sm" href="/items/<%= @item.id %>/edit">Edit item</a>
+<% end %>
 <a class="btn btn-outline-info btn-sm" href="/items">Back to items</a>
+<br><br>
+
+
+<!-- Review form -->
+<h4>Review Form</h4>
+<div class="row justify-content-md-center">
+  <form action="/items/<%= @item.id %>/reviews" method="POST">
+    <label>Comment</label>
+      <input type="text" class="form-control" name="review[comment]" >
+      <br>
+    <label>Rating</label>
+      <input type="text" class="form-control" name="review[rating]" >
+      <br>
+    <input type="submit" class="btn btn-info" value="submit">
+  </form>
+</div>
