@@ -13,13 +13,22 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    if params[:username].empty? || params[:email].empty? || params[:password].empty?
-      flash[:message] = "Please fill in all the fields"
-      redirect to '/signup'
-    else
-      user = User.create(username: params[:username], email: params[:email], password: params[:password])
+#     if params[:username].empty? || params[:email].empty? || params[:password].empty?
+#       flash[:message] = "Please fill in all the fields"
+#       redirect to '/signup'
+#     else
+#       user = User.create(username: params[:username], email: params[:email], password: params[:password])
+#       session[:user_id] = user.id
+#       redirect to '/boards'
+#     end
+    
+#     Refactor
+    user = User.new(params[:user])
+    if user.save
       session[:user_id] = user.id
       redirect to '/boards'
+    else
+      redirect to '/signup'
     end
   end
 
