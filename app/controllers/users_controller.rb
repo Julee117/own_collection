@@ -13,6 +13,19 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
+<<<<<<< HEAD
+=======
+#     if params[:username].empty? || params[:email].empty? || params[:password].empty?
+#       flash[:message] = "Please fill in all the fields"
+#       redirect to '/signup'
+#     else
+#       user = User.create(username: params[:username], email: params[:email], password: params[:password])
+#       session[:user_id] = user.id
+#       redirect to '/boards'
+#     end
+    
+#     Refactor
+>>>>>>> aa01271dd0bcebc3a449a3a9c62667a9340ed2d5
     user = User.new(params[:user])
     if user.save
       session[:user_id] = user.id
