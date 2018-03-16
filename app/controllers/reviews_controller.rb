@@ -10,7 +10,6 @@ class ReviewsController < ApplicationController
       flash[:message] = "Review failed!"
       redirect to "/items/#{@item.id}"
     end
-
   end
 
   get '/reviews/:id' do
