@@ -1,8 +1,7 @@
 <h1><%= @item.description %> Reviews</h1>
-
 <% @item.reviews.each do |review| %>
-<div>
-  <h4><%= review.user.username %>:</h4>
-  <p>Rating: <%= review.rating %><br><%= review.comment %></p>
+  <div>
+    <h4><%= review.user.username %>:</h4>
+    <p>Rating: <%= review.rating %><br><%= review.comment %></p>
+  </div>
 <% end %>
-</div>
