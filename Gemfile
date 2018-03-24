@@ -12,6 +12,8 @@ gem 'bcrypt'
 gem "tux"
 gem 'rack-flash3'
 gem 'sinatra-flash'
+gem 'cloudinary'
+gem 'dotenv'
 
 group :production do
   gem 'pg', "~> 0.18"
