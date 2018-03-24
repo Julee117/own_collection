@@ -30,6 +30,8 @@ body {
   font-size: 46px;
 }
 
+/* show_item */
+
 .show-item {
   background-color: rgba(255,252,252, 0.7);
   border: 2px solid #FAFAFA;
@@ -48,4 +50,33 @@ body {
   width: 300px;
   margin: auto;
   border-radius: 15px;
+}
+
+.review-form {
+  background-color: rgba(255,242,247,0.8);
+  border: 2px solid #ff0066;
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  margin: auto;
+}
+
+.show-comment {
+  background-color: rgba(252,252,252,0.8);
+  border: 2px solid #ff0066;
+  width: 300px;
+  margin: auto;
+  border-radius: 5px;
+  text-align: left;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.comment {
+  font-size: 14px;
 }
