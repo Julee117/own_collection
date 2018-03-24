@@ -3,29 +3,29 @@
 <form action="/items" method="POST" html: { multipart: true }>
   <div class="form-group row">
     <label id="label-name" class="col-sm-2 col-form-label">Add image</label>
-      <div class="col-sm-10">
-        <input type="remote_image_url" class="form-control" name="item[image]" placeholder="Add image url">
-      </div>
+    <div class="col-sm-10">
+      <input type="remote_image_url" class="form-control" name="item[image]" placeholder="Add image url">
+    </div>
     <label id="label-name" class="col-sm-2 col-form-label">Add a description</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" name="item[description]" placeholder="Description..">
-      </div>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="item[description]" placeholder="Description..">
+    </div>
     <label id="label-name" class="col-sm-2 col-form-label">Link to website</label>
-      <div class="col-sm-10">
-         <input type="text" class="form-control" name="item[url]" placeholder="http://">
-      </div>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" name="item[url]" placeholder="http://">
+    </div>
     <label id="label-name" class="col-sm-2 col-form-label">Source of website</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" name="item[site_source]" placeholder="Like 'Crate and Barrel'">
-      </div>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="item[site_source]" placeholder="Like 'Crate and Barrel'">
+    </div>
     <label id="label-name" class="col-sm-2 col-form-label">Add to your board</label>
-      <div class="col-sm-10">
-        <select name="item[board_id]" class="form-control">
-          <% current_user.boards.each do |board| %>
-          <option value="<%= board.id %>"><%= board.name %></option>
-          <% end %>
-        </select>
-      </div>
+    <div class="col-sm-10">
+      <select name="item[board_id]" class="form-control">
+        <% current_user.boards.each do |board| %>
+        <option value="<%= board.id %>"><%= board.name %></option>
+        <% end %>
+      </select>
+    </div>
   </div>
   <input type="submit" class="btn btn-info" value="submit">
 </form>
