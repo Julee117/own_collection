@@ -20,3 +20,12 @@
     </form>
   </div>
 </div>
+<br>
+<div class="container">
+<% @item.reviews.each do |review| %>
+  <div class="show-comment">
+    <p class="name"><%= review.user.username.capitalize %></p>
+    <p class="comment"><%= review.comment%></p>
+  </div>
+<% end %>
+</div>
