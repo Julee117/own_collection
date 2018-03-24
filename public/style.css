@@ -9,6 +9,19 @@ body {
   margin-top: 50px;
 }
 
+/* login */
+.login-form {
+  background-color: rgb(255,255,255);
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  margin: auto;
+}
+
+.login-form h1 {
+  padding-bottom: 20px;
+}
+
 #label-name {
   font-size: 18px;
 }
@@ -31,7 +44,6 @@ body {
 }
 
 /* show_item */
-
 .show-item {
   background-color: rgba(255,252,252, 0.7);
   border: 2px solid #FAFAFA;
