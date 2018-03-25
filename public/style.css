@@ -21,26 +21,14 @@ body {
 .login-form h1 {
   padding-bottom: 20px;
 }
-/* 
-#label-name {
-  font-size: 18px;
-}
 
-#site {
+/* #site {
   color: rgb(93, 160, 182);
   font-weight: bold;
 }
 
-.board-info {
-  font-size: 20px;
-}
-
 .item-info {
   font-size: 20px;
-}
-
-.heading-name {
-  font-size: 46px;
 } */
 
 /* show_item */
@@ -127,4 +115,43 @@ body {
 
 .thumbnail-pic p {
   margin: 0;
+}
+
+/* boards-index */
+.board-wrapper {
+  max-width: 1100px;
+  min-width: 800px;
+  margin: 50px;
+}
+
+.board-column {
+  column-count: 4;
+  column-gap: 2px;
+}
+
+.board-column p {
+  margin: 0;
+  column-span: all;
+}
+
+.display-pics {
+  column-count: 3;
+  column-gap: 2px;
+  column-fill: auto;
+  display: inline-block;
+  background-color: rgba(255,252,252, 0.2);
+  width: 210px;
+  height: 200px;
+  border: 2px solid #FAFAFA;
+  margin: 0 1px 10px 1px;
+}
+
+.display-pics:hover {
+  background-color: rgb(236,251,255);
+  padding: 10px;
+}
+
+.tiny-pic {
+  padding: 1px;
+  width: 100%;
 }
