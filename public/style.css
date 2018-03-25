@@ -151,3 +151,17 @@ body {
   padding: 1px;
   width: 100%;
 }
+
+/* create_item */
+.create-item-form {
+  width: 90%;
+}
+
+.item-input {
+  padding: 3px;
+}
+
+/* create_board */
+.board-name {
+  padding-left: 100px;
+}
