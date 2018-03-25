@@ -1,12 +1,14 @@
 <h1 class="display-4"><%= @board.name %></h1>
-  <div class="container text-info">
-  <% @board.items.each do |item| %>
-    <ul class="list-unstyled">
-      <li><a class="text-info board-info" href="/items/<%= item.id %>"><%= item.description %></a></li>
-    </ul>
-  <% end %>
+  <div class="wrapper text-info">
+    <div class="column">
+      <% @board.items.each do |item| %>
+      <div class="thumbnail-pic">
+        <a class="text-info board-info" href="/items/<%= item.id %>"><img class="thumbnail" src="<%= item.image %>"</a>
+        <p><%= item.description %></p>
+      </div>
+      <% end %>
+    </div>
   </div>
-<br>
 
 <% if @board.user == current_user %>
   <a href="/boards/<%= @board.slug %>/edit" class="btn btn-outline-info btn-sm" >Edit board</a>
