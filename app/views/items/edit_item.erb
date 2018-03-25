@@ -3,23 +3,23 @@
 <form action="/items/<%=@item.id%>" method="POST" html: { multipart: true }>
   <input id="hidden" type="hidden" name="_method" value="patch">
   <div class="form-group row">
-    <label id="label-name" class="col-sm-2 col-form-label">Image</label>
+    <label class="col-sm-2 col-form-label">Image</label>
     <div class="col-sm-10">
       <input type="remote_image_url" class="form-control" name="item[image]" value="<%= @item.image %>">
     </div>
-    <label id="label-name" class="col-sm-2 col-form-label">Description</label>
+    <label class="col-sm-2 col-form-label">Description</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" name="item[description]" value="<%= @item.description %>">
     </div>
-    <label id="label-name" class="col-sm-2 col-form-label">Link to website</label>
+    <label class="col-sm-2 col-form-label">Link to website</label>
     <div class="col-sm-10">
         <input type="text" class="form-control" name="item[url]" value="<%= @item.url %>">
     </div>
-    <label id="label-name" class="col-sm-2 col-form-label">Source of website</label>
+    <label class="col-sm-2 col-form-label">Source of website</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" name="item[site_source]" value="<%= @item.site_source %>">
     </div>
-    <label id="label-name" class="col-sm-2 col-form-label">Add to your board</label>
+    <label class="col-sm-2 col-form-label">Add to your board</label>
     <div class="col-sm-10">
       <select name="item[board_id]" class="form-control">
         <% current_user.boards.each do |board| %>
