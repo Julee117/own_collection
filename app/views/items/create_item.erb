@@ -1,25 +1,25 @@
 <h1>Create item</h1>
 <br>
 <form action="/items" method="POST" html: { multipart: true }>
-  <div class="form-group row">
+  <div class="form-group row create-item-form">
     <label class="col-sm-2 col-form-label">Add image</label>
-    <div class="col-sm-10">
+    <div class="col-sm-10 item-input">
       <input type="remote_image_url" class="form-control" name="item[image]" placeholder="Add image url">
     </div>
     <label class="col-sm-2 col-form-label">Add a description</label>
-    <div class="col-sm-10">
+    <div class="col-sm-10 item-input">
       <input type="text" class="form-control" name="item[description]" placeholder="Description..">
     </div>
     <label class="col-sm-2 col-form-label">Link to website</label>
-    <div class="col-sm-10">
+    <div class="col-sm-10 item-input">
         <input type="text" class="form-control" name="item[url]" placeholder="http://">
     </div>
     <label class="col-sm-2 col-form-label">Source of website</label>
-    <div class="col-sm-10">
+    <div class="col-sm-10 item-input">
       <input type="text" class="form-control" name="item[site_source]" placeholder="Like 'Crate and Barrel'">
     </div>
     <label class="col-sm-2 col-form-label">Add to your board</label>
-    <div class="col-sm-10">
+    <div class="col-sm-10 item-input">
       <select name="item[board_id]" class="form-control">
         <% current_user.boards.each do |board| %>
         <option value="<%= board.id %>"><%= board.name %></option>
