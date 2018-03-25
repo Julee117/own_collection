@@ -22,14 +22,10 @@ body {
   padding-bottom: 20px;
 }
 
-/* #site {
-  color: rgb(93, 160, 182);
-  font-weight: bold;
+/* create-user */
+.user-heading {
+  padding-bottom: 20px;
 }
-
-.item-info {
-  font-size: 20px;
-} */
 
 /* show_item */
 .show-item {
@@ -81,7 +77,7 @@ body {
   font-size: 14px;
 }
 
-/* items-index */
+/* items-index and show_board */
 .wrapper {
   max-width: 1100px;
   min-width: 800px;
@@ -117,7 +113,7 @@ body {
   margin: 0;
 }
 
-/* boards-index */
+/* boards-index and users-show */
 .board-wrapper {
   max-width: 1100px;
   min-width: 800px;
