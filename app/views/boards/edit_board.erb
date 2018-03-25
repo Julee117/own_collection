@@ -4,11 +4,11 @@
   <input id="hidden" type="hidden" name="_method" value="patch">
   <div class="form-group row">
     <label class="col-sm-2 col-form-label label-name">Name</label>
-    <div class="col-sm-10">
+    <div class="col-sm-8">
       <input type="text" class="form-control" name="name" value="<%= @board.name %>">
     </div>
   </div>
-  <input type="submit" class="btn btn-info" value="submit">
+  <input type="submit" class="btn btn-info" value="Submit">
 </form>
 <br><br>
 <form action="/boards/<%= @board.slug %>/delete" method="POST">
