@@ -17,11 +17,13 @@ class ItemsController < ApplicationController
   end
 
   post '/items' do
-    if params[:item][:description].empty? || params[:item][:url].empty? || params[:item][:site_source].empty?
+    if params[:item][:image].empty? || params[:item][:description].empty? || params[:item][:url].empty? || params[:item][:site_source].empty?
       flash[:message] = "Please fill in all the fields"
       redirect to '/items/new'
     else
       @item = Item.create(params[:item])
+      pic = Cloudinary::Uploader.unsigned_upload(params[:item][:image], ENV['UPLOAD_PRESET'], :cloud_name => ENV['CLOUD_NAME'])
+      @item.update(image: pic["secure_url"])
       redirect to "/items/#{@item.id}"
     end
   end
@@ -50,11 +52,13 @@ class ItemsController < ApplicationController
 
   patch '/items/:id' do
     @item = current_user.items.find_by_id(params[:id])
-    if params[:item][:description].empty? || params[:item][:url].empty? || params[:item][:site_source].empty?
+    if params[:item][:image].empty? || params[:item][:description].empty? || params[:item][:url].empty? || params[:item][:site_source].empty?
       flash[:message] = "Please fill in all the fields"
       redirect to "/items/#{@item.id}/edit"
     else
       @item.update(params[:item])
+      Cloudinary::Uploader.unsigned_upload(params[:item][:image], ENV['UPLOAD_PRESET'], :cloud_name => ENV['CLOUD_NAME'])
+      @item.update(image: pic["secure_url"])
       redirect to "/items/#{@item.id}"
     end
   end
