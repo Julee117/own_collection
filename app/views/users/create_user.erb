@@ -1,11 +1,18 @@
-<h1>Create a New Account<h1>
-<h2>Sign Up</h2>
-<br>
-<div class="row justify-content-md-center">
- <form action='/signup' method='POST'>
-   <input type="text" class="form-control" name="user[username]" placeholder="Create a username"><br>
-   <input type="text" class="form-control" name="user[email]" placeholder="Email"><br>
-   <input type="password" class="form-control" name="user[password]" placeholder="Create a password"><br>
-   <input type="submit" class="btn btn-info" value="Sign Up">
- </form>
-</div>
+<h1 class="user-heading">Create a New Account<h1>
+  <div class="login-form">
+    <h2 class="user-heading">Sign Up</h2>
+    <div class="row justify-content-md-center">
+      <form action='/signup' method='POST'>
+        <div class="form-group">
+          <input type="text" class="form-control" name="user[username]" placeholder="Create a username">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="user[email]" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" name="user[password]" placeholder="Create a password">
+        </div>
+        <input type="submit" class="btn btn-info" value="Sign Up">
+      </form>
+    </div>
+  </div>
