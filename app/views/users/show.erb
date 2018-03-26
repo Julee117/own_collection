@@ -3,7 +3,7 @@
     <div class="board-column">
       <% @user.boards.each do |board| %>
       <div class="display-pics">
-        <% board.items[0..5].each do |item| %>
+        <% board.items[0..6].each do |item| %>
           <img class="tiny-pic" src="<%= item.image %>">
         <% end %>
         <p><a class="text-info board-info" href="/boards/<%= board.slug %>"><%= board.name %></a></p>
