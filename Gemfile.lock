@@ -23,19 +23,18 @@ GEM
       concurrent-ruby (~> 1.0)
     method_source (0.9.0)
     minitest (5.10.3)
-    mustermann (1.0.2)
+    mustermann (1.0.3)
     pg (0.21.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    rack (2.0.5)
+    rack (2.0.6)
     rack-flash3 (1.0.5)
       rack
-    rack-protection (2.0.3)
+    rack-protection (2.0.4)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rake (12.3.0)
     require_all (1.4.0)
     ripl (0.7.1)
       bond (~> 0.5.1)
@@ -47,10 +46,10 @@ GEM
       ripl (>= 0.7.0)
     shotgun (0.9.2)
       rack (>= 1.0)
-    sinatra (2.0.3)
+    sinatra (2.0.4)
       mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.3)
+      rack-protection (= 2.0.4)
       tilt (~> 2.0)
     sinatra-activerecord (2.0.13)
       activerecord (>= 3.2)
@@ -80,11 +79,11 @@ DEPENDENCIES
   bcrypt
   pg (~> 0.18)
   pry
+  rack (>= 2.0.6)
   rack-flash3
-  rake
   require_all
   shotgun
-  sinatra (~> 2.0.1)
+  sinatra (>= 2.0.2)
   sinatra-activerecord
   sinatra-flash
   sqlite3
@@ -92,4 +91,4 @@ DEPENDENCIES
   tux
 
 BUNDLED WITH
-   1.16.0
+   1.17.1

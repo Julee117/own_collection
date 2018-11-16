@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <div class="jumbotron jumbotron-fluid bg-info">
+    <div class="navbar justify-content-end bg-info">
       <% if logged_in? %>
       <ul class="nav justify-content-end">
         <li class="nav-item">
           <a class="nav-link text-white" href="/boards">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/users/<%= current_user.slug %>"><%= current_user.username %></a>
+          <a class="nav-link text-white" href="/users/<%= current_user.slug %>"><%= current_user.username.capitalize %></a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="/boards/new">Create board</a>

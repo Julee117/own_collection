@@ -6,25 +6,160 @@ body {
 #main {
   font-family: 'Roboto Slab', serif;
   color: #ff0066;
+  margin-top: 50px;
 }
 
-#label-name {
-  font-size: 18px;
+/* login */
+.login-form {
+  background-color: rgb(255,255,255);
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  margin: auto;
 }
 
-#site {
-  color: rgb(93, 160, 182);
+.login-form h1 {
+  padding-bottom: 20px;
+}
+
+/* create-user */
+.user-heading {
+  padding-bottom: 20px;
+}
+
+/* show_item */
+.show-item {
+  background-color: rgba(255,252,252, 0.7);
+  border: 2px solid #FAFAFA;
+  border-radius: 15px;
+  padding: 10px;
+  width: 500px;
+  margin: auto;
+}
+
+.show-h2 {
+  padding-bottom: 10px;
+}
+
+.show-img {
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  border-radius: 15px;
+}
+
+.review-form {
+  background-color: rgba(255,242,247,0.8);
+  border: 2px solid #ff0066;
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  margin: auto;
+}
+
+.show-comment {
+  background-color: rgba(252,252,252,0.8);
+  border: 2px solid #ff0066;
+  width: 300px;
+  margin: auto;
+  border-radius: 5px;
+  text-align: left;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+
+.name {
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.board-info {
-  font-size: 20px;
+.comment {
+  font-size: 14px;
 }
 
-.item-info {
-  font-size: 20px;
+/* items-index and show_board */
+.wrapper {
+  max-width: 1100px;
+  min-width: 800px;
+  margin: 50px auto;
 }
 
-.heading-name {
-  font-size: 46px;
+.column {
+  column-count: 5;
+  column-gap: 10px;
+  column-fill: auto;
+}
+
+.thumbnail-pic {
+  display: inline-block;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0 2px 10px;
+  border: 2px solid #FAFAFA;
+  padding-bottom: 5px;
+}
+
+.thumbnail-pic:hover {
+  background-color: rgb(236,251,255);
+}
+
+.thumbnail {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.thumbnail-pic p {
+  margin: 0;
+}
+
+/* boards-index and users-show */
+.board-wrapper {
+  max-width: 1100px;
+  min-width: 800px;
+  margin: 50px;
+}
+
+.board-column {
+  column-count: 4;
+  column-gap: 2px;
+}
+
+.board-column p {
+  margin: 0;
+  column-span: all;
+}
+
+.display-pics {
+  column-count: 3;
+  column-gap: 2px;
+  column-fill: auto;
+  display: inline-block;
+  background-color: rgba(255,252,252, 0.2);
+  border: 2px solid #FAFAFA;
+  margin: 0 1px 10px 1px;
+}
+
+.display-pics:hover {
+  background-color: rgb(236,251,255);
+  padding: 10px;
+}
+
+.tiny-pic {
+  padding: 1px;
+  width: 100%;
+}
+
+/* create_item */
+.create-item-form {
+  width: 90%;
+}
+
+.item-input {
+  padding: 3px;
+}
+
+/* create_board */
+.board-name {
+  padding-left: 100px;
 }
